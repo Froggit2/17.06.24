@@ -4,8 +4,10 @@ def is_prime(func):
         if prime_num % 2 == 0:
             if prime_num == 2:
                 print("Простое число")
+                return prime_num
             else:
                 print("Составное число")
+                return prime_num
         d = 3
         while d * d <= prime_num and prime_num % d != 0:
             d += 2
@@ -13,6 +15,7 @@ def is_prime(func):
             print("Простое число")
         else:
             print('Составное число')
+
         return prime_num
     return wrapper
 
@@ -23,5 +26,5 @@ def sum_three(*args):
     return suma
 
 
-numb = sum_three(0, 0, 124211)
+numb = sum_three(2, 3, 6)
 print(numb)
